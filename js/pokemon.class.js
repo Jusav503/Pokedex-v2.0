@@ -1,5 +1,5 @@
 class Pokemon{
-	nombre = '';
+	name = '';
 	id = 0;
 	num = '';
 	img = '';
@@ -17,7 +17,7 @@ class Pokemon{
 	next_evolution = [];
 
 	constructor(nom,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
-		this.nombre = nom || '';
+		this.name = nom || '';
 		this.id = ids || 0;
 		this.num = nums || '';
 		this.img = imgs || '';
@@ -56,9 +56,11 @@ class Pokemon{
 		console.log('evoluciones:' + this.next_evolution);
 	}
 
-	toHtml(){
-		p = '';
-
+	toHtml(nom,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
+		p ='<div class=container>';
+		p+= '<div>'+this.num+this.name+'<br>'+this.type+'<br>'+this.height+'<br>'+this.weight+'<br>'+this.candy+'<br>'+this.candy_count+'<br>'+this.egg+'<br>'+this.spawn_chance+'<br>'+this.avg_spawns+'<br>'+this.spawn_time+'<br>'+this.multipliers+'<br>'+this.weakness+'<br>'+this.next_evolution+'</div>';
+		p+= '<div class=imag>'+this.id+'<img src="'+this.img+'">';
+		p='</div>';
 		return p;
 	}
 
