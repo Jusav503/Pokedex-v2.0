@@ -16,8 +16,13 @@ class Pokemon{
 	weakness = [];
 	next_evolution = [];
 
+<<<<<<< Updated upstream
 	constructor(nom,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
 		this.name = nom || '';
+=======
+	constructor(name,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
+		this.name = name || '';
+>>>>>>> Stashed changes
 		this.id = ids || 0;
 		this.num = nums || '';
 		this.img = imgs || '';
@@ -33,11 +38,21 @@ class Pokemon{
 		this.multipliers = multi || [];
 		this.weakness = weak || [];
 		this.next_evolution = next || [];
+<<<<<<< Updated upstream
 		this.console();
 	}
 
 
 	console(){
+=======
+		
+		
+	}
+
+
+	load(){
+		
+>>>>>>> Stashed changes
 		console.log('nombre:' + this.nombre);
 		console.log('id:' + this.id);
 		console.log('numero:' + this.num);
@@ -55,6 +70,7 @@ class Pokemon{
 		console.log('debilidad:' + this.weakness);
 		console.log('evoluciones:' + this.next_evolution);
 	}
+<<<<<<< Updated upstream
 
 	toHtml(nom,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
 		p ='<div class=container>';
@@ -68,4 +84,6 @@ class Pokemon{
 	load(){
 		console.log('loading Pokemon...');
 	}
+=======
+>>>>>>> Stashed changes
 }
