@@ -1,2 +1,1 @@
-# Justice-Velasco
-Repositorio de Jusav
+# pokedex
