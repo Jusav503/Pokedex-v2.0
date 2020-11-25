@@ -33,7 +33,11 @@ class Pokemon{
 		this.multipliers = multi || [];
 		this.weakness = weak || [];
 		this.next_evolution = next || [];
-		
+		this.console();
+	}
+
+
+	console(){
 		console.log('nombre:' + this.nombre);
 		console.log('id:' + this.id);
 		console.log('numero:' + this.num);
@@ -50,6 +54,12 @@ class Pokemon{
 		console.log('multiplicador:' + this.multipliers);
 		console.log('debilidad:' + this.weakness);
 		console.log('evoluciones:' + this.next_evolution);
+	}
+
+	toHtml(){
+		p = '';
+
+		return p;
 	}
 
 

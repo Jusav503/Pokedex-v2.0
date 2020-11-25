@@ -24,4 +24,7 @@ class Pokedex{
 	load(){
 		console.log('loading Pokemon...');
 	}
+
+
+	//TODO: crear metodo añadir pokemon
 }
