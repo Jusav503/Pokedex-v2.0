@@ -1,7 +1,11 @@
-//var px1 = new Pokedex('Pokedex 1');
-//var px2 = new Pokedex('Pokedex 2');
-var p1 = new Pokemon('Charmander', 4, '004', 'http://www.serebii.net/pokemongo/pokemon/004.png', ['fuego'], '0,61m', '8,5kg', 'Charmander candy', 25, '2km', 0.253, 25, '08:45', [1.65], ['water','ground','rock'],[{'name':'charmelio','num':'005'},{'name':'charizard','num':'006'}]);
 
-$('.lista_pokemon').html(p1.toHtml('Charmander', 4, '004', 'http://www.serebii.net/pokemongo/pokemon/004.png', ['fuego'], '0,61m', '8,5kg', 'Charmander candy', 25, '2km', 0.253, 25, '08:45', [1.65], ['water','ground','rock'],[{'name':'charmelio','num':'005'},{'name':'charizard','num':'006'}]));
-//px.load();
-//console.log(px.listaPokemon);
+jQuery(document).ready(function($) {
+	var px1 = new Pokedex('Pokedex 1');
+	px1.load(function(){
+		console.log(px1.listaPokemon);
+
+
+		$('#pokemon').html(px1.listaPokemon[69].toHtml())
+	});
+
+});

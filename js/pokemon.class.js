@@ -1,8 +1,8 @@
 class Pokemon{
-	name = '';
-	id = 0;
-	num = '';
-	img = '';
+	id = 0; //id de pokemon
+	num = ''; //número de pokemon
+	name = ''; //nombre del pokemon
+	img = ''; //imagen del pokemon
 	type = [];
 	height = '';
 	weight = '';
@@ -16,15 +16,10 @@ class Pokemon{
 	weakness = [];
 	next_evolution = [];
 
-<<<<<<< Updated upstream
-	constructor(nom,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
-		this.name = nom || '';
-=======
-	constructor(name,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
-		this.name = name || '';
->>>>>>> Stashed changes
+	constructor(ids,nums,nam,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
 		this.id = ids || 0;
 		this.num = nums || '';
+		this.nombre = nam || '';
 		this.img = imgs || '';
 		this.type = tipo || [];
 		this.height = altura || '';
@@ -38,24 +33,13 @@ class Pokemon{
 		this.multipliers = multi || [];
 		this.weakness = weak || [];
 		this.next_evolution = next || [];
-<<<<<<< Updated upstream
-		this.console();
+		this.toConsole();
 	}
 
-
-	console(){
-=======
-		
-		
-	}
-
-
-	load(){
-		
->>>>>>> Stashed changes
-		console.log('nombre:' + this.nombre);
+	toConsole(){
 		console.log('id:' + this.id);
 		console.log('numero:' + this.num);
+		console.log('nombre:' + this.nombre);
 		console.log('imagen: ' + this.img);
 		console.log('tipo:' + this.type);
 		console.log('altura:' + this.height);
@@ -70,20 +54,28 @@ class Pokemon{
 		console.log('debilidad:' + this.weakness);
 		console.log('evoluciones:' + this.next_evolution);
 	}
-<<<<<<< Updated upstream
 
-	toHtml(nom,ids,nums,imgs,tipo,altura,peso,caramelo,contc,huevo,sp,avg,sptime,multi,weak,next){
-		p ='<div class=container>';
-		p+= '<div>'+this.num+this.name+'<br>'+this.type+'<br>'+this.height+'<br>'+this.weight+'<br>'+this.candy+'<br>'+this.candy_count+'<br>'+this.egg+'<br>'+this.spawn_chance+'<br>'+this.avg_spawns+'<br>'+this.spawn_time+'<br>'+this.multipliers+'<br>'+this.weakness+'<br>'+this.next_evolution+'</div>';
-		p+= '<div class=imag>'+this.id+'<img src="'+this.img+'">';
-		p='</div>';
+	toHtml(){
+		var p = '';
+
+		p+= '<div>' + 'id:' + this.id + '</div>';
+		p+= '<div>' + 'numero:' + this.num + '</div>';
+		p+= '<div>' + 'nombre:' + this.nombre + '</div>';
+		p+= '<div>' + 'imagen: ' + this.img + '</div>'; // '<img src="+this.img">'
+		p+= '<div>' + 'tipo:' + this.type + '</div>';
+		p+= '<div>' + 'altura:' + this.height + '</div>';
+		p+= '<div>' + 'peso:' + this.weight + '</div>';
+		p+= '<div>' + 'caramelo:' + this.candy + '</div>';
+		p+= '<div>' + 'contador caramelos:' + this.candy_count + '</div>';
+		p+= '<div>' + 'huevo:' + this.egg + '</div>';
+		p+= '<div>' + 'ratio spawn:' + this.spawn_chance + '</div>';
+		p+= '<div>' + 'avg:' + this.avg_spawns + '</div>';
+		p+= '<div>' + 'tiempo spawn:' + this.spawn_time + '</div>';
+		p+= '<div>' + 'multiplicador:' + this.multipliers + '</div>';
+		p+= '<div>' + 'debilidad:' + this.weakness + '</div>';
+		p+= '<div>' + 'evoluciones:' + this.next_evolution + '</div>';
+
+
 		return p;
 	}
-
-
-	load(){
-		console.log('loading Pokemon...');
-	}
-=======
->>>>>>> Stashed changes
 }
